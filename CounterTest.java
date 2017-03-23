@@ -236,6 +236,8 @@ public class CounterTest extends Thread
         runTests (VolatileCounter.class, new DirectCounterTester (), delay);
         runTests (SimpleCounter.class, new DirectCounterTester (), delay);
         runTests (AtomicCounter.class, new DirectCounterTester (), delay);
+        runTests (LongAccumulatorCounter.class, new DirectCounterTester (), delay);
+        runTests (LongAdderCounter.class, new DirectCounterTester (), delay);
         runCompoundTests (TrivialCounter.class, new DirectCounterTester (), delay);
         runCompoundTests (VolatileCounter.class, new DirectCounterTester (), delay);
         runCompoundTests (SimpleCounter.class, new DirectCounterTester (), delay);
