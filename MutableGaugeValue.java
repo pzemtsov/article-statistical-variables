@@ -7,6 +7,9 @@ public class MutableGaugeValue extends GaugeValue
     private long min = Long.MAX_VALUE;
     public long dummy1;
     public long dummy2;
+    public long dummy3;
+    public long dummy4;
+    public long dummy5;
 
     @Override
     public long getCount ()
