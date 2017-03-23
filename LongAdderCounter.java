@@ -3,6 +3,8 @@ import java.util.concurrent.atomic.LongAdder;
 
 public class LongAdderCounter extends ServerCounter {
 
+    private long start = 0;
+
     private final LongAdder adder = new LongAdder();
 
     @Override
@@ -12,7 +14,9 @@ public class LongAdderCounter extends ServerCounter {
 
     @Override
     public long getAndReset() {
-        return adder.sumThenReset();
+        long current = adder.sum ();
+        long result = current - start;
+        start = current;
+        return result;
     }
-
 }
